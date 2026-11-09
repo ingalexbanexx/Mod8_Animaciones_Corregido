@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alexbanexx | Soluciones Informáticas & Portafolio</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <!-- Google Fonts: Orbitron & Rajdhani -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap 5.3.3 CSS via CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap Icons (Librería oficial de íconos) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Estilos propios personalizados con sobreescritura armónica -->
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body class="site-body">
+    <!-- 1. NAVBAR DE BOOTSTRAP RESPONSIVA CON MENÚ HAMBURGUESA -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-header sticky-top">
+      <div class="container-fluid px-lg-4">
+        <a class="navbar-brand brand-container" href="index.html">
+          <img
+            class="brand-logo"
+            src="images/logo.png"
+            alt="Logotipo oficial de Alexbanexx"
+          />
+          <div class="d-flex flex-column justify-content-center align-texts">
+            <span class="brand-title">Alexbanexx</span>
+            <span class="brand-subtitle">Soluciones Informáticas</span>
+          </div>
+        </a>
+
+        <!-- Botón Hamburguesa Responsivo -->
+        <button
+          class="navbar-toggler custom-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarAlexbanexx"
+          aria-controls="navbarAlexbanexx"
+          aria-expanded="false"
+          aria-label="Alternar navegación"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Enlaces de navegación colapsables con le icono Home-->
+        <div
+          class="collapse navbar-collapse justify-content-between"
+          id="navbarAlexbanexx"
+        >
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-list">
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-active"
+                aria-current="page"
+                href="index.html"
+                ><i class="bi bi-house"></i></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/sobre-mi.html">Sobre mí</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/proyectos.html">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/contacto.html">Contacto</a>
+            </li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-2 header-social-container">
+            <ul class="social-list footer-social mb-0">
+              <li class="social-item">
+                <a
+                  class="social-link"
+                  href="https://github.com/ingalexbanexx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
+                  <i class="bi bi-github"></i>
+                </a>
+              </li>
+              <li class="social-item">
+                <a
+                  class="social-link"
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <i class="bi bi-linkedin"></i>
+                </a>
+              </li>
+              <li class="social-item">
+                <a
+                  class="social-link"
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <i class="bi bi-instagram"></i>
+                </a>
+              </li>
+              <li class="social-item">
+                <a
+                  class="social-link"
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Twitter / X"
+                >
+                  <i class="bi bi-twitter-x"></i>
+                </a>
+              </li>
+              <li class="social-item">
+                <a
+                  class="social-link"
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                >
+                  <i class="bi bi-facebook"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="content-container">
+      <!-- SECCIÓN HERO -->
+      <section class="section-block hero-grid-section">
+        <div class="hero-content">
+          <h1 class="main-heading">
+            Ingeniería Informática & Arquitectura Web
+          </h1>
+          <p class="lead-paragraph">
+            Construcción de interfaces resilientes, maquetación de precisión con
+            CSS Grid en dos dimensiones y layouts adaptables con diseño
+            Mobile-First complementados con componentes interactivos.
+          </p>
+          <div class="hero-actions">
+            <a href="pages/proyectos.html" class="btn btn-primary"><i class="bi bi-rocket-takeoff me-2"></i> Explorar Proyectos</a
+            >
+            <!-- Botón que activa el componente Modal de Bootstrap -->
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-toggle="modal"
+              data-bs-target="#modalDiagnostico"
+            ><i class="bi bi-info-circle me-1"></i> 
+              Diagnóstico IT
+            </button>
+          </div>
+        </div>
+        <figure class="media-card hero-media">
+          <img
+            class="media-image"
+            src="images/banner-inicio.jpg"
+            alt="Circuito tecnológico de alta velocidad"
+          />
+          <figcaption class="media-caption">
+            Desarrollo modular bajo estándares W3C y metodologías ágiles.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- SECCIÓN COMPONENTE BOOTSTRAP: CAROUSEL INTERACTIVO PARA GALERÍA TECNOLÓGICA -->
+      <section class="section-block gallery-carousel-section">
+        <h2 class="section-heading">Galería de Soluciones Digitales</h2>
+        <p class="lead-paragraph">
+          Explora nuestras capacidades de infraestructura, desarrollo y diseño
+          interactivo en el carrusel de tecnología avanzada.
+        </p>
+
+        <div
+          id="carouselInicio"
+          class="carousel slide custom-carousel shadow-lg"
+          data-bs-ride="carousel"
+          data-bs-interval="4000"
+        >
+          <!-- Indicadores -->
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselInicio"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselInicio"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselInicio"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+
+          <!-- Slides del Carousel -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="images/banner-inicio.jpg"
+                class="d-block w-100 carousel-img"
+                alt="Infraestructura de desarrollo web"
+              />
+              <div class="carousel-caption d-none d-md-block custom-caption">
+                <h3>Arquitectura Web de Alto Rendimiento</h3>
+                <p>
+                  Plataformas construidas con semántica pura y
+                  microinteracciones suaves.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="images/servicios.jpg"
+                class="d-block w-100 carousel-img"
+                alt="Servicios de ingeniería informática"
+              />
+              <div class="carousel-caption d-none d-md-block custom-caption">
+                <h3>Infraestructura & Servidores</h3>
+                <p>
+                  Seguridad perimetral, redes y administración de entornos
+                  críticos.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="images/proyectos.jpg"
+                class="d-block w-100 carousel-img"
+                alt="Portafolio de sistemas web"
+              />
+              <div class="carousel-caption d-none d-md-block custom-caption">
+                <h3>Portafolio Escalable</h3>
+                <p>
+                  Soluciones a medida listas para producción y despliegue
+                  continuo.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controles Prev / Next -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselInicio"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselInicio"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- SECCIÓN PILARES: Grid de 3 columnas fluidas -->
+      <section class="section-block info-section">
+        <h2 class="section-heading">Pilares de Ingeniería</h2>
+        <div class="features-grid">
+          <article class="content-card">
+            <h3 class="card-title">Bootstrap 5 Integrado</h3>
+            <p class="body-text">
+              Navbar adaptable con menú hamburguesa, carruseles fluidos y
+              componentes accesibles en armonía con nuestra identidad visual.
+            </p>
+          </article>
+          <article class="content-card">
+            <h3 class="card-title">Estados Interactivos</h3>
+            <p class="body-text">
+              Uso exhaustivo de pseudoclases :hover, :focus y :active con
+              transiciones suaves en todos los botones, tarjetas y enlaces.
+            </p>
+          </article>
+          <article class="content-card">
+            <h3 class="card-title">Layout Híbrido Sólido</h3>
+            <p class="body-text">
+              El poder de CSS Grid para el layout maestro y Flexbox para
+              componentes, sin perder modularidad ni control tipográfico.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SECCIÓN MAESTRA CON CSS GRID Y GRID-TEMPLATE-AREAS: HUB DE OPERACIONES Y SEDE -->
+      <section class="section-block master-hub-section">
+        <h2 class="section-heading">
+          Centro de Operaciones y Sede Tecnológica
+        </h2>
+
+        <div class="hub-grid-layout">
+          <article class="hub-area-header content-card">
+            <h3 class="card-title">Sede Central San Salvador de Jujuy</h3>
+            <p class="body-text">
+              Infraestructura técnica para consultoría informática, despliegue
+              de servidores y desarrollo de plataformas en el NOA.
+            </p>
+          </article>
+
+          <article class="hub-area-info content-card">
+            <h4 class="card-subtitle">Datos de Contacto Directo</h4>
+            <p class="location-data">
+              <strong>Dirección:</strong> Horacio Guzmán 285, San Salvador de
+              Jujuy, Jujuy, Argentina
+            </p>
+            <p class="location-data">
+              <strong>Teléfono:</strong>
+              <a class="contact-link" href="tel:+543885900488"
+                >+54 3885900488</a
+              >
+            </p>
+            <p class="location-data">
+              <strong>Email:</strong>
+              <a class="contact-link" href="mailto:ingalexbanexx@gmail.com"
+                >ingalexbanexx@gmail.com</a
+              >
+            </p>
+            <p class="location-data">
+              <strong>Atención:</strong> Lunes a Viernes de 09:00 a 19:00 hs
+              (GMT-3)
+            </p>
+          </article>
+
+          <aside class="hub-area-status content-card">
+            <h4 class="card-subtitle">Estado de Servicios</h4>
+            <ul class="status-list">
+              <li class="status-item">
+                <span class="badge-status online"></span> Bootstrap 5.3 CDN:
+                Activo
+              </li>
+              <li class="status-item">
+                <span class="badge-status online"></span> Navbar Responsiva:
+                Operativa
+              </li>
+              <li class="status-item">
+                <span class="badge-status online"></span> Estados Interactivos:
+                Habilitados
+              </li>
+            </ul>
+          </aside>
+
+          <div class="hub-area-map map-wrapper">
+            <iframe
+              class="map-frame"
+              title="Ubicación Alexbanexx Jujuy"
+              src="https://maps.google.com/maps?q=Horacio%20Guzman%20285%2C%20San%20Salvador%20de%20Jujuy&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+            >
+            </iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- COMPONENTE BOOTSTRAP: MODAL DE DIAGNÓSTICO IT -->
+    <div
+      class="modal fade custom-modal"
+      id="modalDiagnostico"
+      tabindex="-1"
+      aria-labelledby="modalDiagnosticoLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal-content">
+          <div class="modal-header custom-modal-header">
+            <h5 class="modal-title" id="modalDiagnosticoLabel">
+              Diagnóstico Tecnológico Inicial
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body custom-modal-body">
+            <p class="body-text">
+              ¿Necesitas evaluar la arquitectura de tu plataforma o
+              infraestructura de red? En Alexbanexx realizamos auditorías de
+              código, optimizaciones de tiempos de respuesta y planes de
+              contingencia para sistemas críticos.
+            </p>
+            <p class="body-text text-accent mb-0">
+              <strong>Contacto directo:</strong> ingalexbanexx@gmail.com | +54
+              3885900488
+            </p>
+          </div>
+          <div class="modal-footer custom-modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary btn-sm"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <a href="pages/contacto.html" class="btn btn-primary btn-sm"
+              >Solicitar Asesoría</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+      <img
+        class="brand-logo"
+        src="images/logo.png"
+        alt="Logotipo oficial de Alexbanexx"
+      />
+      <p class="copyright-text mb-0">
+        &copy; 2026 Alexbanexx - Marcelo Alejandro Banega. Todos los derechos
+        reservados.
+      </p>
+      <ul class="social-list footer-social mb-0">
+        <li class="social-item">
+          <a
+            class="social-link"
+            href="https://github.com/ingalexbanexx"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <i class="bi bi-github"></i>
+          </a>
+        </li>
+        <li class="social-item">
+          <a
+            class="social-link"
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </li>
+        <li class="social-item">
+          <a
+            class="social-link"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+        </li>
+        <li class="social-item">
+          <a
+            class="social-link"
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter / X"
+          >
+            <i class="bi bi-twitter-x"></i>
+          </a>
+        </li>
+        <li class="social-item">
+          <a
+            class="social-link"
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <i class="bi bi-facebook"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+    <!-- Bootstrap 5.3.3 JS Bundle con Popper via CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+@use '../utilities/mixins' as m;
+
+.content-container {
+  max-width: 1200px;
+  width: 92%;
+  margin: 2.2rem auto;
+  flex: 1;
+
+  @include m.respond-up('md') {
+    width: 88%;
+    margin: 2.8rem auto;
+  }
+
+  @include m.respond-up('lg') {
+    width: 90%;
+    margin: 3.5rem auto;
+  }
+}
+
+.section-block {
+  margin-bottom: 3.5rem;
+
+  @include m.respond-up('lg') { margin-bottom: 4.5rem; }
+}

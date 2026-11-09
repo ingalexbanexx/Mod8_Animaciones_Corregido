@@ -1,0 +1,27 @@
+@use '../utilities/variables' as v;
+
+// Reseteo universal y control del box model
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Se mantienen las variables CSS (--x) generadas desde las variables Sass
+:root {
+  --color-bg-base: #{v.$color-bg-base};
+  --color-surface: #{v.$color-surface};
+  --color-surface-hover: #{v.$color-surface-hover};
+  --color-border: #{v.$color-border};
+
+  --color-primary: #{v.$color-primary};
+  --color-secondary: #{v.$color-secondary};
+  --color-text-main: #{v.$color-text-main};
+  --color-text-muted: #{v.$color-text-muted};
+  --color-online: #{v.$color-online};
+
+  --font-heading: #{v.$font-heading};
+  --font-body: #{v.$font-body};
+
+  --transition-smooth: #{v.$transition-smooth};
+}

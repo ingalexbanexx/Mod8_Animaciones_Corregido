@@ -1,0 +1,80 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+.custom-carousel {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid v.$color-border;
+  background-color: v.$color-surface;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+
+  &:hover .carousel-img {
+    filter: brightness(0.9);
+  }
+}
+
+.carousel-img {
+  height: 380px;
+  object-fit: cover;
+  filter: brightness(0.78);
+  transition: filter 0.3s ease;
+
+  @include m.respond-up('lg') { height: 440px; }
+}
+
+.custom-caption {
+  background: rgba(v.$color-bg-base, 0.75);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(v.$color-primary, 0.3);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  bottom: 2rem;
+
+  h3 {
+    font-family: v.$font-heading;
+    color: v.$color-primary;
+    font-size: 1.45rem;
+    margin-bottom: 0.3rem;
+  }
+
+  p {
+    font-family: v.$font-body;
+    font-size: 1.05rem;
+    color: v.$color-text-main;
+    margin-bottom: 0;
+  }
+}
+
+// Indicadores
+.carousel-indicators {
+  [data-bs-target] {
+    background-color: v.$color-text-muted;
+    height: 4px;
+    border-radius: 2px;
+    opacity: 0.5;
+    transition: v.$transition-smooth;
+  }
+
+  .active,
+  [data-bs-target]:hover {
+    background-color: v.$color-primary;
+    opacity: 1;
+    box-shadow: 0 0 8px v.$color-primary;
+  }
+}
+
+// Controles Prev / Next
+.carousel-control-prev,
+.carousel-control-next {
+  width: 8%;
+  transition: v.$transition-smooth;
+
+  &:hover {
+    background: rgba(v.$color-primary, 0.08);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px v.$color-primary;
+  }
+}

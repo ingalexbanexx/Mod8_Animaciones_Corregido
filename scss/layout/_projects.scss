@@ -1,0 +1,45 @@
+@use '../utilities/mixins' as m;
+
+.projects-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "feat"
+    "card1"
+    "card2"
+    "card3";
+  gap: 1.5rem;
+
+  @include m.respond-up('md') {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "feat feat"
+      "card1 card2"
+      "card3 card3";
+    gap: 1.6rem;
+  }
+
+  @include m.respond-up('lg') {
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: repeat(3, minmax(140px, auto));
+    grid-template-areas:
+      "feat card1"
+      "feat card2"
+      "feat card3";
+    gap: 1.8rem;
+  }
+}
+
+.project-area-feat {
+  grid-area: feat;
+
+  @include m.respond-up('lg') {
+    padding: 2.2rem;
+
+    .card-title { font-size: 1.45rem; }
+  }
+}
+
+.project-area-card1 { grid-area: card1; }
+.project-area-card2 { grid-area: card2; }
+.project-area-card3 { grid-area: card3; }

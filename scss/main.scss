@@ -1,0 +1,30 @@
+// main.scss : punto de entrada. Solo @use, nada de estilos aquí.
+// El ORDEN importa: components va ANTES que layout para respetar la cascada
+
+// 1. Utilidades (no generan CSS)
+@use 'utilities/variables';
+@use 'utilities/mixins';
+
+// 2. Base
+@use 'base/reset';
+@use 'base/base';
+@use 'base/typography';
+
+// 3. Componentes
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/carousel';
+@use 'components/forms';
+@use 'components/modals';
+@use 'components/social';
+@use 'components/badges';
+
+// 4. Layout
+@use 'layout/header';
+@use 'layout/nav';
+@use 'layout/section';
+@use 'layout/hero';
+@use 'layout/hub';
+@use 'layout/projects';
+@use 'layout/contact';
+@use 'layout/footer';

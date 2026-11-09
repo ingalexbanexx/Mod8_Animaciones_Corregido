@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyectos | Alexbanexx</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/logo.png" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap 5.3.3 CSS via CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap Icons (Librería oficial de íconos) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Enlace a Estilos propios -->
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body class="site-body">
+    <!-- NAVBAR DE BOOTSTRAP -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-header sticky-top">
+      <div class="container-fluid px-lg-4">
+        <a class="navbar-brand brand-container" href="../index.html">
+          <img
+            class="brand-logo"
+            src="../images/logo.png"
+            alt="Logotipo oficial de Alexbanexx"
+          />
+          <span class="brand-title">Alexbanexx</span>
+        </a>
+
+        <button
+          class="navbar-toggler custom-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarAlexbanexx"
+          aria-controls="navbarAlexbanexx"
+          aria-expanded="false"
+          aria-label="Alternar navegación"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-between"
+          id="navbarAlexbanexx"
+        >
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-list">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobre-mi.html">Sobre mí</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-active"
+                aria-current="page"
+                href="proyectos.html"
+                >Proyectos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-2 header-social-container">
+            <ul class="social-list mb-0">
+              <li class="social-item">
+                <a
+                  class="social-link"
+                  href="https://github.com/ingalexbanexx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </li>
+              <li class="social-item">
+                <a
+                  class="social-link"
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LinkedIn</a
+                >
+              </li>
+              <li class="social-item">
+                <a
+                  class="social-link"
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="content-container">
+      <!-- CABECERA DE PROYECTOS -->
+      <section class="section-block hero-grid-section">
+        <div class="hero-content">
+          <h1 class="main-heading">Portafolio & Casos de Estudio</h1>
+          <p class="lead-paragraph">
+            Galería interactiva de sistemas desarrollados con estándares
+            rigurosos de accesibilidad, diseño adaptable y componentes Bootstrap
+            personalizados.
+          </p>
+        </div>
+        <figure class="media-card hero-media">
+          <img
+            class="media-image"
+            src="../images/proyectos.jpg"
+            alt="Muestra de proyectos tecnológicos y código"
+          />
+          <figcaption class="media-caption">
+            Sistemas implementados con componentes desacoplados y diseño
+            adaptativo.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- SEGUNDO CAROUSEL: GALERÍA DE CAPTURAS DE PROYECTOS (Requisito: Componente en 2da página) -->
+      <section class="section-block gallery-carousel-section">
+        <h2 class="section-heading">Showcase Dinámico de Proyectos</h2>
+        <div
+          id="carouselProyectos"
+          class="carousel slide custom-carousel shadow-lg"
+          data-bs-ride="carousel"
+          data-bs-interval="4500"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselProyectos"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Proyecto 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselProyectos"
+              data-bs-slide-to="1"
+              aria-label="Proyecto 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselProyectos"
+              data-bs-slide-to="2"
+              aria-label="Proyecto 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="../images/proyectos.jpg"
+                class="d-block w-100 carousel-img"
+                alt="Caso de Estudio 1"
+              />
+              <div class="carousel-caption d-none d-md-block custom-caption">
+                <h3>Portal Institucional & E-Commerce</h3>
+                <p>Maquetación semántica con CSS Grid y transiciones suaves.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../images/servicios.jpg"
+                class="d-block w-100 carousel-img"
+                alt="Caso de Estudio 2"
+              />
+              <div class="carousel-caption d-none d-md-block custom-caption">
+                <h3>Dashboard de Monitoreo de Redes</h3>
+                <p>
+                  Supervisión en tiempo real de infraestructura de servidores.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../images/banner-inicio.jpg"
+                class="d-block w-100 carousel-img"
+                alt="Caso de Estudio 3"
+              />
+              <div class="carousel-caption d-none d-md-block custom-caption">
+                <h3>Auditoría de Ciberseguridad</h3>
+                <p>
+                  Análisis de vulnerabilidades perimetrales y protocolos
+                  seguros.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselProyectos"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselProyectos"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- SECCIÓN DE PROYECTOS ORGANIZADOS EN GRID CON ESTADOS INTERACTIVOS -->
+      <section class="section-block">
+        <h2 class="section-heading">Catálogo Detallado de Desarrollos</h2>
+        <div class="projects-grid-layout">
+          <!-- Proyecto 1: Proyecto Estrella (featured) -->
+          <article class="project-card project-area-feat interactive-card">
+            <div class="project-badge">Caso Principal / Destacado</div>
+            <h3 class="card-title">
+              Portal Institucional & E-Commerce Escalable
+            </h3>
+            <p class="body-text">
+              Diseño web integral bajo estrategia Mobile-First, grilla maestra
+              en CSS Grid y componentes de interacción fluida. Tiempos de
+              respuesta certificados por debajo de 400 ms.
+            </p>
+            <ul class="project-tags">
+              <li class="tag-item">HTML5 Semántico</li>
+              <li class="tag-item">Bootstrap 5 CDN</li>
+              <li class="tag-item">Carousel & Modals</li>
+              <li class="tag-item">:hover / :focus / :active</li>
+            </ul>
+            <button
+              type="button"
+              class="btn btn-primary btn-sm align-self-start"
+              data-bs-toggle="modal"
+              data-bs-target="#modalProyecto1"
+            >
+              Ficha Técnica
+            </button>
+          </article>
+
+          <!-- Proyecto 2: Tarjeta Secundaria 1 -->
+          <article class="project-card project-area-card1 interactive-card">
+            <div class="project-badge">Backend / Cloud</div>
+            <h3 class="card-title">Sistema de Gestión Centralizado</h3>
+            <p class="body-text">
+              API RESTful para administración de recursos informáticos
+              empresariales, monitoreo de métricas y bases de datos
+              relacionales.
+            </p>
+            <ul class="project-tags">
+              <li class="tag-item">Node.js</li>
+              <li class="tag-item">PostgreSQL</li>
+              <li class="tag-item">Docker</li>
+            </ul>
+            <a href="#" class="btn btn-secondary btn-sm align-self-start"
+              >Documentación</a
+            >
+          </article>
+
+          <!-- Proyecto 3: Tarjeta Secundaria 2 -->
+          <article class="project-card project-area-card2 interactive-card">
+            <div class="project-badge">Seguridad / Redes</div>
+            <h3 class="card-title">Auditoría Perimetral de Redes</h3>
+            <p class="body-text">
+              Diagnóstico de vulnerabilidades, configuración de firewalls
+              perimetrales y VPNs seguras para empresas del norte argentino.
+            </p>
+            <ul class="project-tags">
+              <li class="tag-item">Linux</li>
+              <li class="tag-item">Firewall</li>
+              <li class="tag-item">VPN</li>
+            </ul>
+            <a href="#" class="btn btn-secondary btn-sm align-self-start"
+              >Informe</a
+            >
+          </article>
+
+          <!-- Proyecto 4: Tarjeta Secundaria 3 -->
+          <article class="project-card project-area-card3 interactive-card">
+            <div class="project-badge">Infraestructura IT</div>
+            <h3 class="card-title">Automatización & Despliegues</h3>
+            <p class="body-text">
+              Configuración de pipelines CI/CD y despliegues controlados en
+              entornos de servidores físicos y virtuales con alta
+              disponibilidad.
+            </p>
+            <ul class="project-tags">
+              <li class="tag-item">CI/CD</li>
+              <li class="tag-item">DevOps</li>
+              <li class="tag-item">Cloud</li>
+            </ul>
+            <a href="#" class="btn btn-secondary btn-sm align-self-start"
+              >Detalles</a
+            >
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- COMPONENTE BOOTSTRAP: MODAL FICHA TÉCNICA PROYECTO 1 -->
+    <div
+      class="modal fade custom-modal"
+      id="modalProyecto1"
+      tabindex="-1"
+      aria-labelledby="modalProyecto1Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal-content">
+          <div class="modal-header custom-modal-header">
+            <h5 class="modal-title" id="modalProyecto1Label">
+              Ficha Técnica: Portal Institucional Escalable
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body custom-modal-body">
+            <h6 class="text-accent mb-2">Especificaciones Técnicas:</h6>
+            <ul class="body-text mb-3">
+              <li>
+                <strong>Maquetación:</strong> HTML5 W3C Validado sin etiquetas
+                no semánticas.
+              </li>
+              <li>
+                <strong>Estilos:</strong> CSS Grid + Flexbox + Bootstrap 5.3 CDN
+                para componentes.
+              </li>
+              <li>
+                <strong>Microinteracciones:</strong> Transiciones de 0.25s en
+                botones, enlaces y cards.
+              </li>
+              <li>
+                <strong>Tiempo de carga:</strong> First Contentful Paint &lt;
+                0.5s.
+              </li>
+            </ul>
+            <p class="body-text mb-0">
+              El proyecto se encuentra en producción y cuenta con monitoreo
+              continuo de disponibilidad y seguridad.
+            </p>
+          </div>
+          <div class="modal-footer custom-modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary btn-sm"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <a href="contacto.html" class="btn btn-primary btn-sm"
+              >Consultar Caso Similar</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+      <img
+        class="brand-logo"
+        src="images/logo.png"
+        alt="Logotipo oficial de Alexbanexx"
+      />
+      <p class="copyright-text mb-0">
+        &copy; 2026 Alexbanexx - Marcelo Alejandro Banega. Todos los derechos
+        reservados.
+      </p>
+      <ul class="social-list footer-social mb-0">
+        <li class="social-item">
+          <a
+            class="social-link"
+            href="https://github.com/ingalexbanexx"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <i class="bi bi-github"></i>
+          </a>
+        </li>
+        <li class="social-item">
+          <a
+            class="social-link"
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </li>
+        <li class="social-item">
+          <a
+            class="social-link"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+        </li>
+        <li class="social-item">
+          <a
+            class="social-link"
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter / X"
+          >
+            <i class="bi bi-twitter-x"></i>
+          </a>
+        </li>
+        <li class="social-item">
+          <a
+            class="social-link"
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <i class="bi bi-facebook"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+    <!-- Bootstrap 5.3.3 JS Bundle con Popper via CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

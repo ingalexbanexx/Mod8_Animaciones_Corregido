@@ -1,0 +1,15 @@
+@use '../utilities/mixins' as m;
+
+.contact-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+
+  @include m.respond-up('md') { grid-template-columns: 1fr 1.3fr; }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}

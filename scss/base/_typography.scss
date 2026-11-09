@@ -1,0 +1,54 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+.main-heading {
+  font-family: v.$font-heading;
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: v.$color-primary;
+  line-height: 1.25;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 0 15px rgba(v.$color-primary, 0.25);
+
+  @include m.respond-up('md') { font-size: 2.1rem; }
+  @include m.respond-up('lg') { font-size: 2.45rem; }
+}
+
+.section-heading {
+  font-family: v.$font-heading;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: v.$color-text-main;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid v.$color-secondary;
+  padding-left: 0.85rem;
+
+  @include m.respond-up('lg') { font-size: 1.7rem; }
+}
+
+.lead-paragraph {
+  font-size: 1.1rem;
+  color: v.$color-text-muted;
+  margin-bottom: 1.3rem;
+}
+
+.body-text {
+  font-size: 1rem;
+  color: v.$color-text-main;
+  margin-bottom: 0.75rem;
+}
+
+.card-title {
+  font-family: v.$font-heading;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: v.$color-primary;
+  margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+  font-family: v.$font-heading;
+  font-size: 1.05rem;
+  color: v.$color-text-main;
+  margin-bottom: 0.6rem;
+}

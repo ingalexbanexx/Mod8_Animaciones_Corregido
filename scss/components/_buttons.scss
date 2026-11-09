@@ -1,0 +1,70 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+.btn {
+  font-family: v.$font-heading;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 0.7rem 1.45rem;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: v.$transition-smooth;
+}
+
+// Botón primario
+.btn-primary {
+  background-color: v.$color-primary;
+  color: v.$color-bg-base;
+  @include m.neon-glow(12px, 0.4);
+  border-color: v.$color-primary;
+
+  &:hover {
+    background-color: v.$color-primary-light;
+    color: v.$color-bg-base;
+    @include m.neon-glow(20px, 0.85);
+    transform: translateY(-2px);
+    border-color: v.$color-primary-light;
+  }
+
+  &:focus {
+    @include m.focus-ring(4px, 0.5);
+  }
+
+  &:active {
+    transform: scale(0.96);
+    background-color: v.$color-primary-dark;
+    @include m.neon-glow(8px, 0.4);
+  }
+}
+
+// Botón secundario
+.btn-secondary {
+  background-color: transparent;
+  color: v.$color-primary;
+  border: 1px solid v.$color-primary;
+
+  &:hover {
+    background-color: rgba(v.$color-primary, 0.15);
+    color: v.$color-primary;
+    border-color: v.$color-primary;
+    @include m.neon-glow(14px, 0.4);
+    transform: translateY(-2px);
+  }
+
+  &:focus {
+    @include m.focus-ring(4px, 0.4);
+  }
+
+  &:active {
+    transform: scale(0.96);
+    background-color: rgba(v.$color-primary, 0.25);
+  }
+}
+
+.btn-sm {
+  padding: 0.45rem 1rem;
+  font-size: 0.82rem;
+}

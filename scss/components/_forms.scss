@@ -1,0 +1,56 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: v.$color-bg-base;
+  border: 1px solid v.$color-border;
+  border-radius: 4px;
+  color: v.$color-text-main;
+  font-family: v.$font-body;
+  font-size: 1rem;
+  transition: v.$transition-smooth;
+
+  &:hover {
+    border-color: rgba(v.$color-primary, 0.5);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: v.$color-primary;
+    @include m.neon-glow(12px, 0.5);
+    background-color: rgba(v.$color-bg-base, 0.95);
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-label {
+  font-family: v.$font-heading;
+  font-size: 0.95rem;
+  color: v.$color-primary;
+}
+
+.contact-link {
+  color: v.$color-primary;
+  text-decoration: none;
+  font-weight: 600;
+  transition: v.$transition-smooth;
+
+  &:hover {
+    color: v.$color-primary-light;
+    text-decoration: underline;
+    text-shadow: 0 0 8px rgba(v.$color-primary, 0.6);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px v.$color-primary;
+  }
+}

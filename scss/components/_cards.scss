@@ -1,0 +1,49 @@
+@use '../utilities/variables' as v;
+@use '../utilities/mixins' as m;
+
+// Tarjetas interactivas con :hover y :focus-within
+.content-card,
+.project-card {
+  background-color: v.$color-surface;
+  border: 1px solid v.$color-border;
+  border-radius: 8px;
+  padding: 1.6rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  transition: v.$transition-smooth;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: v.$color-primary;
+    box-shadow: 0 8px 26px rgba(v.$color-primary, 0.25);
+  }
+
+  &:focus-within {
+    border-color: v.$color-primary;
+    box-shadow: 0 0 0 3px rgba(v.$color-primary, 0.3);
+  }
+}
+
+// Tarjeta multimedia
+.media-card {
+  background-color: v.$color-surface;
+  border: 1px solid v.$color-border;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.media-image {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+.media-caption {
+  padding: 0.8rem 1.1rem;
+  font-size: 0.9rem;
+  color: v.$color-text-muted;
+  background-color: rgba(0, 0, 0, 0.45);
+  border-top: 1px solid v.$color-border;
+  font-style: italic;
+}

@@ -1,0 +1,27 @@
+@use 'sass:map';
+@use 'variables' as v;
+
+// Media query mobile first: @include m.respond-up('md') { ... }
+@mixin respond-up($key) {
+  @media (min-width: map.get(v.$breakpoints, $key)) {
+    @content;
+  }
+}
+
+// Resplandor neón: box-shadow: 0 0 Xpx rgba(color, alpha)
+@mixin neon-glow($size: 12px, $alpha: 0.25, $color: v.$color-primary) {
+  box-shadow: 0 0 $size rgba($color, $alpha);
+}
+
+// Anillo de foco accesible
+@mixin focus-ring($width: 3px, $alpha: 0.45, $color: v.$color-primary) {
+  outline: none;
+  box-shadow: 0 0 0 $width rgba($color, $alpha);
+}
+
+// Flex alineado verticalmente con separación
+@mixin flex-align($gap: 0) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+}
