@@ -1,0 +1,64 @@
+// ==========================================================
+// Mixins avanzados (Módulo 8)
+// Se usan con namespace:  @use "../utilities/mixins-avanzados" as adv;
+// ==========================================================
+@use "sass:math";
+@use "sass:list";
+
+// --- Variables (con !default para no pisar las tuyas) -----
+$bp-tablet:     768px  !default;
+$bp-desktop:    1024px !default;
+$color-neon:    #00e5ff !default;
+$easing-suave:  cubic-bezier(0.4, 0, 0.2, 1) !default;
+$base-espacio:  1rem !default;
+
+// --- Media query mobile-first -----------------------------
+@mixin desde($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+// --- Transición con parámetros ----------------------------
+@mixin transicion(
+  $propiedades: (transform, box-shadow),
+  $duracion: 0.3s,
+  $easing: $easing-suave
+) {
+  $lista: ();
+  @each $p in $propiedades {
+    $lista: list.append($lista, $p $duracion $easing, comma);
+  }
+  transition: $lista;
+}
+
+// --- Elevar al hover/focus (usa operadores y math.abs) ----
+@mixin elevar($y: -6px, $escala: 1.03, $brillo: $color-neon) {
+  @include transicion;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY($y) scale($escala);
+    box-shadow: 0 (math.abs($y) * 2) (math.abs($y) * 4) rgba($brillo, 0.35);
+  }
+}
+
+// --- Aplicar un @keyframes con parámetros y @if -----------
+@mixin animar($nombre, $duracion: 0.6s, $retraso: 0s, $repeticion: 1) {
+  animation-name: $nombre;
+  animation-duration: $duracion;
+  animation-timing-function: $easing-suave;
+  animation-fill-mode: both;
+  animation-iteration-count: $repeticion;
+
+  @if $retraso > 0s {
+    animation-delay: $retraso;
+  }
+}
+
+// --- Accesibilidad: respetar "reducir movimiento" ---------
+@mixin sin-movimiento {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
