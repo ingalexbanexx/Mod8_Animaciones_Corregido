@@ -4,6 +4,7 @@
 // 1. Utilidades (no generan CSS)
 @use 'utilities/variables';
 @use 'utilities/mixins';
+@use 'utilities/mixins-avanzados';
 
 // 2. Base
 @use 'base/reset';
@@ -18,6 +19,7 @@
 @use 'components/modals';
 @use 'components/social';
 @use 'components/badges';
+@use 'components/animations';
 
 // 4. Layout
 @use 'layout/header';

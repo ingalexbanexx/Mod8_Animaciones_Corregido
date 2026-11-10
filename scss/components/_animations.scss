@@ -1,0 +1,112 @@
+// ==========================================================
+// Animaciones nativas: transition + @keyframes
+// ==========================================================
+@use "sass:math";
+@use "../utilities/mixins-avanzados" as adv;
+
+// --- Placeholders para @extend ----------------------------
+%tarjeta-base {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(adv.$color-neon, 0.25);
+}
+
+%boton-base {
+  display: inline-block;
+  padding: 0.65rem 1.4rem;
+  border: 1px solid adv.$color-neon;
+  border-radius: 50rem;
+  background: transparent;
+  color: adv.$color-neon;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+// --- @keyframes (con transform) ---------------------------
+@keyframes entrada-arriba {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+@keyframes pulso-neon {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(adv.$color-neon, 0.5); }
+  50%      { box-shadow: 0 0 0 10px rgba(adv.$color-neon, 0); }
+}
+
+// --- Componentes ------------------------------------------
+.anim-card {
+  @extend %tarjeta-base;
+  @include adv.elevar(-6px, 1.03);
+}
+
+.anim-card__cuerpo {
+  padding: calc(#{adv.$base-espacio} + 1vw);
+}
+
+.anim-btn {
+  @extend %boton-base;
+  @include adv.transicion((background-color, color, transform), 0.25s);
+
+  &:hover,
+  &:focus-visible {
+    background: adv.$color-neon;
+    color: #0b0f1a;
+    transform: translateY(-2px);
+  }
+}
+
+.anim-btn--pulso { @include adv.animar(pulso-neon, 2.4s, 0s, infinite); }
+.anim-flotar     { @include adv.animar(flotar, 4s, 0s, infinite); }
+.anim-entrada    { @include adv.animar(entrada-arriba, 0.6s); }
+
+// --- Retrasos generados con @each -------------------------
+$retrasos: (1: 0.1s, 2: 0.2s, 3: 0.3s, 4: 0.4s);
+
+@each $n, $tiempo in $retrasos {
+  .anim-retraso-#{$n} {
+    animation-delay: $tiempo;
+  }
+}
+
+// --- Grilla de tarjetas: mobile-first con operadores ------
+.anim-grid {
+  display: grid;
+  gap: adv.$base-espacio;
+  grid-template-columns: minmax(0, 1fr);
+
+  @include adv.desde(adv.$bp-tablet) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: adv.$base-espacio * 1.5;
+  }
+
+  @include adv.desde(adv.$bp-desktop) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: adv.$base-espacio * 2;
+  }
+}
+
+// --- Accesibilidad ----------------------------------------
+@include adv.sin-movimiento {
+  .anim-card,
+  .anim-btn,
+  .anim-btn--pulso,
+  .anim-flotar,
+  .anim-entrada {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
