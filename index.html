@@ -25,6 +25,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Estilos propios personalizados con sobreescritura armónica -->
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
@@ -161,13 +163,12 @@
             Mobile-First complementados con componentes interactivos.
           </p>
           <div class="hero-actions">
-            <a href="pages/proyectos.html" class="btn btn-primary"><i class="bi bi-rocket-takeoff me-2"></i> Explorar Proyectos</a
+            <a href="pages/proyectos.html" class="btn btn-primary anim-btn"><i class="bi bi-rocket-takeoff me-2"></i> Explorar Proyectos</a
             >
             <!-- Botón que activa el componente Modal de Bootstrap -->
             <button
               type="button"
-              class="btn btn-secondary"
-              data-bs-toggle="modal"
+              class="btn btn-secondary anim-btn anim-btn"              data-bs-toggle="modal"
               data-bs-target="#modalDiagnostico"
             ><i class="bi bi-info-circle me-1"></i> 
               Diagnóstico IT
@@ -406,7 +407,7 @@
             </h5>
             <button
               type="button"
-              class="btn-close btn-close-white"
+              class="btn-close btn-close-white anim-btn"
               data-bs-dismiss="modal"
               aria-label="Cerrar"
             ></button>
@@ -426,12 +427,12 @@
           <div class="modal-footer custom-modal-footer">
             <button
               type="button"
-              class="btn btn-secondary btn-sm"
+              class="btn btn-secondary btn-sm anim-btn"
               data-bs-dismiss="modal"
             >
               Cerrar
             </button>
-            <a href="pages/contacto.html" class="btn btn-primary btn-sm"
+            <a href="pages/contacto.html" class="btn btn-primary btn-sm anim-btn anim-btn"
               >Solicitar Asesoría</a
             >
           </div>
@@ -515,5 +516,15 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <!-- AOS (Animate On Scroll) JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Inicializar AOS
+      AOS.init({
+        duration: 800, // Duración de la animación en milisegundos
+        easing: 'ease-in-out', // Tipo de easing para la animación
+        once: true, // Animar solo una vez al hacer scroll
+      });
+    </script>
   </body>
 </html>
